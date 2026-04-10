@@ -15,7 +15,14 @@ discount_amount_1 = original_price_1 * order_1_dicount
 total_cost_1 = round(original_price_1 - discount_amount_1, 2)
 
 # Вывод
-print("Заказ 1:", f"Исходная цена: {original_price_1}", f"Размер скидки: {discount_amount_1}", f"Итоговая стоимость: {total_cost_1}", sep='\n', end='\n\n')
+print(
+    "Заказ 1:",
+    f"Исходная цена: {original_price_1}",
+    f"Размер скидки: {discount_amount_1}",
+    f"Итоговая стоимость: {total_cost_1}",
+    sep='\n',
+    end='\n\n'
+    )
 
 
 # Заказ 2: без скидки
@@ -35,7 +42,14 @@ discount_amount_2 = original_price_2 * order_2_dicount
 total_cost_2 = round(original_price_2 - discount_amount_2, 2)
 
 # Вывод
-print("Заказ 2:",f"Исходная цена: {original_price_2}", f"Размер скидки: {discount_amount_2}", f"Итоговая стоимость: {total_cost_2}", sep='\n', end='\n\n')
+print(
+    "Заказ 2:",
+    f"Исходная цена: {original_price_2}",
+    f"Размер скидки: {discount_amount_2}",
+    f"Итоговая стоимость: {total_cost_2}",
+    sep='\n',
+    end='\n\n'
+    )
 
 
 # Заказ 3: с большой суммой
@@ -55,4 +69,10 @@ discount_amount_3 = original_price_3 * order_3_dicount
 total_cost_3 = round(original_price_3 - discount_amount_3, 2)
 
 # Вывод
-print("Заказ 3:", f"Исходная цена: {original_price_3}", f"Размер скидки: {discount_amount_3}", f"Итоговая стоимость: {total_cost_3}", sep='\n')
+print(
+    "Заказ 3:",
+    f"Исходная цена: {original_price_3}",
+    f"Размер скидки: {discount_amount_3}",
+    f"Итоговая стоимость: {total_cost_3}",
+    sep='\n'
+    )

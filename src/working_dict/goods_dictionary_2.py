@@ -29,8 +29,8 @@ while True:
         user_id = input("ID пользователя: ").strip()
         name = input("Имя: ").strip()
         email = input("Email: ").strip()
-
-        users[user_id] = {
+        # Было сделано преобразование типов с user_id -> int(user_id)
+        users[int(user_id)] = {
             "name": name,
             "email": email
         }
@@ -61,8 +61,8 @@ while True:
     elif choice == '4':
         # Поиск в products
         search_name = input("Название для поиска: ").strip()
-
-        if search_name in product_name:
+        # Произвёл замену с product_name на products
+        if search_name in products:
             info = products[search_name]
             print(
                 f"✅ НАЙДЕН: {search_name}",

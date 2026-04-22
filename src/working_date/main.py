@@ -1,4 +1,5 @@
-from date_v import calculate_delivery, log_creation
+from date_v.calculate_delivery import calculate_delivery_date
+from date_v.log_creation import log_order_creation
 from datetime import datetime
 
 
@@ -18,11 +19,11 @@ while True:
         match choice:
             case 2:
                 try:
-                    quantity_delivery_date = int(input("Введите предварительный срок доставки: "))
+                    quantity_delivery_date = int(input("\nВведите предварительный срок доставки: "))
                     order_id = int(input("Введите ID: "))
                     order_date = datetime.now()
 
-                    delivery_date = calculate_delivery(
+                    delivery_date = calculate_delivery_date(
                         order_date,
                         quantity_delivery_date
                         )
@@ -33,16 +34,16 @@ while True:
                     }
 
                     print(
-                        f"Дата создания заказа: {order_date}"
+                        f"\nДата создания заказа: {order_date}"
                     )
                 except ValueError:
                     print("❌ Неверный ввод")
                 except KeyboardInterrupt:
                     print("❗Принудительная остановка❗")
-                # except Exception:
-                #     print("❌ Обработка данных невозможна ❌")
+                except Exception:
+                    print("❌ Обработка данных невозможна ❌")
                 else:
-                    print(log_creation(order_id, order_date))
+                    print(log_order_creation(order_id, order_date))
             case 1:
                 try:
                     order_id = int(input("\nВведите свой ID: "))
@@ -69,7 +70,7 @@ while True:
         print("❌ Неверный ввод")
     except KeyboardInterrupt:
         print("❗Принудительная остановка❗")
-    # except Exception:
-    #     print("❌ Обработка данных невозможна ❌")
+    except Exception:
+        print("❌ Обработка данных невозможна ❌")
     else:
         print("\n✅ Обработка данных прошла успешно ✅")
